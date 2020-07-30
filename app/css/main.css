@@ -1,0 +1,629 @@
+html, body {
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: #f0f0f0;
+  font-family: SourceSansPro;
+  width: 100vw;
+  color: #101010;
+	font-size: 10px;
+}
+
+.encabezado {
+	position: absolute;
+	top: 0;
+	z-index: 5;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	width: 100%;
+}
+.encabezado-informate {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.enlace-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+	margin-left: 2.25rem;
+}
+
+.enlace-imagen-informate{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+}
+
+.logotipo-encabezado{
+  width: 100%;
+}
+
+.boton-header{
+  font-family: SourceSansPro-regular;
+	font-size: 1rem;
+	color: #f0f0f0;
+  text-decoration: none;
+	margin-right: 2.25rem;
+}
+
+.boton-header-informate{
+  font-family: SourceSansPro;
+	font-size: 0.9rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #f0f0f0;
+  text-decoration: none;
+	border-radius: 1.25rem;
+	width: 3.9rem;
+	height: 1.5rem;
+	background: rgb(41, 178, 239);
+  background: linear-gradient(344deg, rgba(41, 178, 239, 1) 0%, rgba(41, 199, 239, 1) 100%);
+}
+
+.body-landing-page{
+	display: flex;
+	flex-direction: column;
+}
+
+.imagen-background-landing-page{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16rem;
+	z-index: 0;
+}
+
+.imagen-background-landing-page-2{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 14rem;
+	z-index: 0;
+}
+
+.seccion-padre-landing-page{
+  position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+  width: 100vw;
+  background-color: #F0F0F0;
+  z-index: 1;
+}
+
+.cuerpo-pagina-1{
+	display: flex;
+	flex-direction: column-reverse;
+	margin-top: 5vh;
+  z-index: inherit;
+}
+
+.imagen-producto{
+		width: 51%;
+		max-width: 15rem;
+		margin: auto auto 2rem auto;
+    padding: 0 2.25rem;
+}
+.imagen-producto-desktop{
+		display: none;
+    width: 51%;
+		max-width: 15rem;
+		margin: auto auto 2rem auto;
+    padding: 0 2.25rem;
+}
+.cuerpo-landing-page{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  margin: 0 2.25rem;
+}
+.titulo-reclamo{
+	font-size: 1.8rem;
+	margin: 0;
+	text-align: center;
+	font-family: SourceSansPro-regular;
+  width: 90%;
+}
+.descripcion-reclamo{
+	font-size: 1rem;
+	margin: 0.6rem 0;
+	text-align: center;
+  width: 75%;
+}
+.call-to-action{
+	width: 8.5rem;
+	height: 2.85rem;
+	border-radius: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #f0f0f0;
+	font-size: 1rem;
+	font-family: SourceSansPro;
+	background-color: #E65F49;
+	margin: 1.6rem 0 0 0;
+}
+.call-to-action:hover{
+	background-color: #D1543F;
+}
+
+/* CSS PAGINA ENTRAR */
+.section-padre-entrar{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    top: 0;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: rgba(0,0,0,0.15);
+}
+
+.cerrar-entrar{
+	align-self: flex-end;
+	margin-top: 1vh;
+  margin-bottom: -8vh;
+	margin-right: 4vw;
+	text-decoration: none;
+	font-size: 2.5rem;
+	right: 2.25rem;
+	color: #101010;
+	transform: rotate(45deg);
+}
+
+.bloque-login {
+  overflow: auto;
+  width: 20rem;
+  background-color: #f0f0f0;
+  border-radius: 2rem;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alerta-login {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.contenedor-alerta-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 35px;
+  padding: 0 1.5rem;
+  width: 10rem;
+	margin: 0 auto;
+}
+
+.fondo-alerta {
+  position: absolute;
+  top: 0;
+  background-color: #000000;
+  opacity: 20%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.contenedor-alerta-login h2 {
+  font-size: 1.25rem;
+  margin: 1rem auto 0 auto;
+}
+
+.contenedor-alerta-login p {
+  font-size: 0.9rem;
+  font-family: SourceSansPro;
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+}
+
+.contenedor-alerta-login a {
+  font-size: 1rem;
+  font-family: SourceSansPro;
+  text-decoration: none;
+  margin: 0.5rem 0 0.75rem 0;
+  color: #29c7ef;
+}
+
+.body-entrar {
+  overflow: hidden;
+  font-family: SourceSansPro-semibold;
+}
+
+#alertaLoginActiva, #fondoAlerta {
+  display: none;
+}
+
+.titulo-entrar {
+  font-size: 2.2rem;
+  font-family: SourceSansPro-Regular;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.form-login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.caja-label {
+  height: 2rem;
+  margin-bottom: 1.8rem;
+  padding-left: 15px;
+  width: 70%;
+  font-size: 1rem;
+  border: #101010 1px solid;
+  border-radius: 100px;
+  background: transparent;
+  color: #101010;
+}
+
+.caja-label::placeholder {
+  color: #101010;
+}
+
+.boton-enviar {
+  text-align: center;
+  font-size: 1rem;
+  justify-content: center;
+  width: 5rem;
+  height: 2rem;
+  display: flex;
+  border-radius: 60px;
+  background: linear-gradient(344deg, rgba(41, 178, 239, 1) 0%, rgba(41, 199, 239, 1) 100%);
+  font-family: SourceSansPro-extralight;
+  border: none;
+  color: #f0f0f0;
+  margin-bottom: 1.75rem;
+}
+.boton-enviar:hover{
+	cursor: pointer;
+}
+
+/* INFORMATE */
+.seccion-informacion{
+  z-index: -2;
+	padding: 0 2.25rem;
+}
+
+.articulo-informacion {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-informacion {
+  font-family: SourceSansPro-regular;
+  margin: 0;
+  font-size: 1.8rem;
+  color: #101010;
+  white-space: nowrap;
+}
+
+.description-informacion {
+  font-family: SourceSansPro;
+  text-align: justify;
+  font-size: 1.4rem;
+  letter-spacing: 0.6px;
+}
+
+.contenedor-imagen-informacion {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imagen-informacion {
+  width: 140%;
+	margin-top: -1.5rem;
+}
+
+.destacar-texto-informacion {
+  color: rgb(41, 178, 239);
+}
+
+.boton-comprar {
+  height: 2.75rem;
+  width: 8.25rem;
+  font-size: 1.15rem;
+  margin: 1rem auto 2rem auto;
+  font-family: SourceSansPro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 4rem;
+  background: #29c7ef;
+  color: #f0f0f0;
+  z-index: inherit;
+}
+
+.boton-comprar:hover {
+  background: #2BB1D3;
+  border: 1px solid #2BB1D3;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+.imagen-pc {
+  display: none;
+}
+
+#alerta-error {
+    display: none;
+    width: 80%;
+    position: fixed;
+    z-index: 2;
+    background-color: #E9E9E9;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    top: 6rem;
+    border: 1px solid #B41F00;
+}
+
+#alerta-error h2{
+    color: #B41F00;
+    font-size: 16px;
+}
+
+/*////// RESPONSIVE //////*/
+@media only screen and (min-width: 480px) and (orientation: landscape){
+  .imagen-producto{
+    display: none;
+  }
+  .imagen-producto-desktop{
+    display: inline;
+    margin: 0;
+    width: 30%;
+    max-width: 220px;
+    margin-right: 1rem;
+  }
+  .cuerpo-pagina-1{
+    margin-top: 5rem;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+  .imagen-background-landing-page{
+    width: 52%;
+  }
+  .imagen-background-landing-page-2{
+    width: 40%;
+  }
+
+  .encabezado-informate{
+    margin-bottom: 0;
+  }
+  .titulo-informacion {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .imagen-pc {
+    display: block;
+    width: 100%;
+  }
+  .contenedor-imagen-informacion {
+    margin: -3.5rem auto;
+  }
+  .description-informacion {
+    font-size: 1.5rem;
+    letter-spacing: 0.6px;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .imagen-mobile{
+    display: none;
+  }
+  .boton-comprar {
+    width: 10rem;
+    height: 3rem;
+    margin-bottom: 4rem;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (orientation: portrait){
+  .imagen-background-landing-page{
+    width: 65%;
+  }
+  .imagen-background-landing-page-2{
+    width: 80%;
+  }
+  .imagen-producto{
+  		width: 35%;
+  		max-width: 28rem;
+  }
+  .titulo-reclamo{
+  	font-size: 3rem;
+  }
+  .descripcion-reclamo{
+  	font-size: 1.8rem;
+  }
+  .call-to-action{
+  	width: 12rem;
+  	height: 4.1rem;
+  	border-radius: 5rem;
+  	font-size: 1.55rem;
+  	margin: 1rem 0 0 0;
+  }
+
+  .enlace-imagen{
+    width: 8rem;
+    margin-left: 3.25rem;
+  }
+  .enlace-imagen-informate{
+    width: 8rem;
+  }
+  .encabezado, .encabezado-informate{
+    height: 6rem;
+  }
+  .boton-header{
+    margin-right: 3.25rem;
+    font-size: 1.45rem;
+  }
+  .boton-header-informate{
+    font-size: 1.45rem;
+    width: 6rem;
+    height: 2.25rem;
+  }
+  .cuerpo-landing-page{
+    margin: 0 3.25rem;
+  }
+  .seccion-informacion{
+    padding: 0 3.25rem;
+  }
+  .titulo-informacion{
+    font-size: 3rem;
+  }
+  .description-informacion{
+    font-size: 2.25rem;
+    margin: 1rem 0;
+  }
+  .boton-comprar {
+    width: 12rem;
+    height: 5rem;
+    font-size: 1.75rem;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (orientation: landscape){
+  .imagen-background-landing-page{
+    width: 60%;
+  }
+  .imagen-background-landing-page-2{
+    width: 60%;
+  }
+  .imagen-producto-desktop{
+  		width: 35%;
+  		max-width: 28rem;
+  }
+  .titulo-reclamo{
+  	font-size: 3rem;
+    width: 100%;
+  }
+  .descripcion-reclamo{
+  	font-size: 1.8rem;
+    margin-top: 2rem;
+    width: 90%
+  }
+  .call-to-action{
+  	width: 12rem;
+  	height: 4.1rem;
+  	border-radius: 5rem;
+  	font-size: 1.55rem;
+  	margin: 3rem 0 0 0;
+  }
+
+  .enlace-imagen {
+    width: 9rem;
+  	margin-left: 3.25rem;
+  }
+  .encabezado, .encabezado-informate{
+    height: 6rem;
+  }
+  .seccion-informacion{
+    padding: 0 3.25rem
+  }
+  .boton-header{
+    margin-right: 3.25rem;
+    font-size: 1.25rem;
+  }
+  .cuerpo-landing-page{
+    margin: 0 3.25rem;
+  }
+  .titulo-informacion{
+    font-size: 3.5rem;
+  }
+  .description-informacion{
+    font-size: 2.25rem;
+    margin-bottom: 0;
+  }
+  .boton-comprar {
+    width: 12rem;
+    height: 4.5rem;
+    font-size: 1.75rem;
+    margin-top: 0;
+  }
+  .enlace-imagen-informate{
+    width: 9rem;
+  }
+  .boton-header-informate{
+    font-size: 1.35rem;
+    width: 5.5rem;
+    height: 2.25rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) and (orientation: landscape){
+  .imagen-background-landing-page{
+    width: 50%;
+  }
+  .imagen-background-landing-page-2{
+    width: 42%;
+  }
+  .imagen-producto-desktop{
+  		width: 32%;
+  		max-width: 25rem;
+      margin-right: 3rem;
+  }
+  .titulo-reclamo{
+    font-size: 3.3rem;
+    width: 80%;
+  }
+  .descripcion-reclamo{
+    width: 75%
+  }
+  .articulo-informacion{
+    width: 85%;
+    margin: 0 auto;
+  }
+  .contenedor-imagen-informacion {
+    margin-top: -7.25rem;
+    margin-bottom: -7.5rem;
+  }
+  .bloque-login{
+    width: 32rem;
+  }
+  .cerrar-entrar{
+  	align-self: flex-end;
+  	margin-top: 1vh;
+    margin-bottom: -8vh;
+  	margin-right: 2vw;
+  	text-decoration: none;
+  	font-size: 2.5rem;
+  	right: 2.25rem;
+  	color: #101010;
+  	transform: rotate(45deg);
+  }
+}

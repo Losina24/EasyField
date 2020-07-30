@@ -1,0 +1,627 @@
+/* CUERPO DE LA PÁGINA */
+
+html,
+body {
+
+	margin: 0;
+}
+
+body::-webkit-scrollbar {
+
+	display: none;
+}
+
+body {
+	font-family: SourceSansPro;
+	width: 100vw;
+}
+
+.cuerpo-pagina {
+	background: #f0f0f0;
+
+	color: #101010;
+	font-size: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* ELEMENTOS GENERALES */
+
+button,
+input[type=submit] {
+	outline: none;
+	border: none;
+	background: none;
+}
+
+li,
+ul {
+
+	list-style: none;
+}
+
+a {
+
+	text-decoration: none;
+}
+
+
+/* SECCIONES DE LA PÁGINA */
+
+.encabezado {
+
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.menu-sonda {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	;
+	margin: 0 2.25rem;
+	max-height: 20px;
+}
+
+.grafica {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem auto 2.5rem auto;
+	padding: 0 2.25rem;
+	width: 90%;
+}
+
+.overlay {
+
+	background: rgba(0, 0, 0, .1);
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	visibility: hidden;
+}
+
+.overlay.active {
+
+	visibility: visible;
+}
+
+
+/* ELEMENTOS DE LA PAGINA */
+
+/* Encabezado */
+
+.enlace-imagen {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 7rem;
+	margin-left: 2.25rem;
+}
+
+.logotipo-encabezado {
+
+	width: 100%;
+}
+
+.encabezado .contenedor {
+
+	width: 2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 3%;
+}
+
+.Menu-amburguesa {
+
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup {
+
+	background: #F0F0F0;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .1);
+	border-radius: 5px;
+	font-family: SourceSansPro;
+	width: 10%;
+	height: 100%;
+	transition: .3s ease all;
+	opacity: 0;
+}
+
+.popup.active {
+
+	width: 25%;
+	opacity: 1;
+}
+
+.popup .btn-cerrar-popup {
+
+	font-size: 16px;
+	line-height: 16px;
+	padding: 15px;
+	height: 100%;
+	text-align: right;
+	transition: .1s ease all;
+	color: black;
+}
+
+.popup .form {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.contenedor {
+	height: 100%;
+	width: 28%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.icono-med {
+	font-size: 1.25rem;
+	margin-left: -.25rem;
+}
+
+
+/* Menú sonda */
+
+.volver {
+	text-decoration: none;
+	width: 8rem;
+	font-size: 1.15rem;
+	color: #29c7ef;
+	font-family: SourceSansPro;
+}
+
+.volver:hover {
+	text-decoration: none;
+	color: #318fed;
+}
+
+.iconos {
+
+	width: 30%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.boton-reinicio {
+
+	width: 10%;
+	height: 7%;
+	margin-left: 80%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2px;
+}
+
+.boton-reinicio img {
+
+	width: 9px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+
+table {
+
+	width: 100%;
+}
+
+table::-webkit-scrollbar {
+	display: none;
+}
+
+.comparativa {
+
+	width: 100%;
+	height: 100%;
+}
+
+.elementos-lista {
+
+	display: flex;
+	justify-content: center;
+	height: 34px;
+}
+
+.boton-lista {
+
+	font-family: SourceSansPro;
+	;
+	height: 100%;
+	width: 100%;
+	font-size: 1.9vh;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.boton-lista:hover {
+
+	color: "#2980B9";
+}
+
+.titulo-mediciones {
+
+	font-family: SourceSansPro-regular;
+	text-align: center;
+}
+
+.boton-cerrar-sesion {
+	font-family: SourceSansPro;
+	font-size: 0.85rem;
+	margin-right: 2.25rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #f0f0f0;
+	text-decoration: none;
+	border-radius: 1.25rem;
+	width: 6rem;
+	background: rgb(41, 178, 239);
+	background: linear-gradient(344deg, rgba(41, 178, 239, 1) 0%, rgba(41, 199, 239, 1) 100%);
+	background-color: transparent;
+	border-radius: solid 1px black;
+	padding: 8px;
+	break
+}
+
+.boton-cerrar-sesion:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.dropbtn {
+
+	padding: 1px;
+	font-size: 2vh;
+	font-family: SourceSansPro;
+	border: none;
+	cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+	color: #2980B9;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	margin-right: 15%;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	width: 140%;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	border-radius: 12px;
+	border-top-left-radius: 0px;
+}
+
+.dropdown-content a {
+	color: black;
+	font-family: SourceSansPro;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.8vh;
+}
+
+.dropdown-content a:hover {
+	color: #2980B9;
+}
+
+.show {
+	display: block;
+}
+
+.show2 {
+	display: block;
+}
+
+/* Gráficas */
+
+.titulo-grafica {
+	font-family: SourceSansPro-regular;
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 0;
+}
+
+
+/*////// RESPONSIVE //////*/
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+
+	.popup .contenedor-button {
+		margin-right: 10px;
+		margin-left: 10px;
+		margin-top: 22px
+	}
+
+	.titulo-grafica {
+		font-family: SourceSansPro-regular;
+		font-size: 1.5rem;
+	}
+
+	.grafica {
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.graficas-superior {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.graficas-inferior {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.contenedor-grafica {
+		width: 80%;
+		height: 100%;
+	}
+
+	.encabezado {
+		height: 7rem;
+	}
+
+	.titulo-sondas {
+		font-size: 1rem;
+		margin-left: 1.7rem;
+	}
+
+	.enlace-imagen {
+		width: 9rem;
+	}
+}
+
+@media only screen and (min-width: 667px) and(max-width: 1024px) and (orientation: landscape) {
+
+	.grafica,
+	.grafica h2 {
+		margin: 1rem auto;
+		font-size: 1.2rem;
+		padding: 0px 4rem;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	h2 {
+		font-size: 0px;
+	}
+
+	.contenedor-grafica {
+
+		position: relative;
+		width: 70vw;
+		height: 100vh;
+	}
+
+	.graficas-superior {
+		display: flex;
+		flex-direction: row;
+		width: 50%;
+		height: 50%;
+	}
+
+	.graficas-inferior {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.encabezado {
+		height: 7rem;
+	}
+
+	.enlace-imagen {
+		width: 9rem;
+	}
+}
+
+/* Menú y graficas responsive */
+
+@media (min-width: 1025px) {
+
+	.popup.active {
+
+		width: 40%;
+		opacity: 1;
+	}
+
+	.popup h3 {
+
+		text-align: center;
+		font-size: 140%;
+	}
+
+	.contenedor-grafica {
+
+		position: relative;
+		width: 40vw;
+		height: 35vh;
+	}
+
+	.titulo-mediciones {
+		font-family: SourceSansPro-regular;
+		font-size: 1.9rem;
+		padding-right: 0px;
+		padding-left: 280px;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.dropdown-container {
+
+		width: 100%;
+		height: 100%;
+		position: relative;
+		font-size: 1.6vh;
+		border-radius: 12px;
+		margin-right: 45%;
+		font-size: 2.3vw;
+	}
+
+	.dropdown-container .contenedor-menu-comparativa {
+
+		width: 600%;
+	}
+
+	.dropdown-container ul {
+		width: 550%;
+	}
+
+	.contenedor-grafica {
+		position: relative;
+		width: 90vw;
+		height: 65vh;
+	}
+
+	.titulo-mediciones {
+		font-size: 1.9rem;
+		padding-right: 0px;
+		padding-left: 110px;
+	}
+}
+
+@media (max-width: 800px) {
+
+	.dropdown-container {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		font-size: 1.6vh;
+		border-radius: 12px;
+		margin-right: 45%;
+		font-size: 2.5vw;
+	}
+
+	.dropdown-container .contenedor-menu-comparativa {
+
+		width: 600%;
+	}
+
+	.dropdown-container ul {
+
+		width: 550%;
+	}
+
+	.contenedor-grafica {
+		font-family: SourceSansPro-regular;
+		position: relative;
+		width: 90vw;
+		height: 53vh;
+	}
+
+	.titulo-mediciones {
+		font-size: 1.9rem;
+		padding-right: 0px;
+		padding-left: 85px;
+	}
+}
+
+@media (max-width: 670px) {
+
+	.dropdown-container {
+		width: 100%;
+		height: 100%;
+		font-size: 2.9vw;
+	}
+
+	.dropdown-container .contenedor-menu-comparativa {
+		width: 600%;
+	}
+
+	.dropdown-container ul {
+		width: 600%;
+	}
+
+	.contenedor-grafica {
+		position: relative;
+		width: 90vw;
+		height: 38vh;
+	}
+
+	.titulo-mediciones {
+		font-size: 0rem;
+		text-align: center;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.grafica .contenedor-grafica {
+		position: relative;
+		width: 90vw;
+		height: 33vh;
+	}
+
+	.dropdown-container .contenedor-menu-comparativa {
+		width: 600%;
+	}
+
+	.dropdown-container ul {
+		width: 550%;
+	}
+
+	.dropdown-container {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		font-size: 1.6vh;
+		border-radius: 12px;
+		margin-right: 45%;
+		font-size: 3.5vw;
+	}
+
+	.titulo-grafica {
+		font-size: 1.45rem;
+		margin-bottom: .75rem;
+	}
+
+	@media (max-width: 360px) {
+
+		.grafica .contenedor-grafica {
+			position: relative;
+			width: 90vw;
+			height: 21vh;
+		}
+	}
+}

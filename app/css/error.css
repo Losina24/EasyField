@@ -1,0 +1,234 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+
+	background: #f0f0f0;
+	font-family: SourceSansPro;
+	color: #101010;
+	width: 100vw;
+	font-size: 10px;
+}
+
+.encabezado {
+
+	width: 10%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enlace-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+	margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.logotipo-encabezado{
+    width: 10rem;
+}
+
+.imagen-background{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 13rem;
+	z-index: 0;
+	margin: 0;
+}
+
+.imagen-background2{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 13rem;
+	z-index: 0;
+	margin: 0;
+}
+
+.contenedor{
+
+	margin: 1rem;
+	margin-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url();
+}
+
+.contenedor .ErrorMes{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.contenedor .ErrorMes .ErrorNum{
+	font-size: 8rem;
+	margin: 0px;
+}
+
+.ErrorMes{
+    margin-top: 3rem;
+}
+
+.contenedor .ErrorMes .ErrorText{
+	font-size: 2rem;
+	padding-left:2rem;
+	padding-right: 2rem;
+	margin-top: 0;
+}
+
+.Volver{
+	margin-top: 1.5rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.Volver .BVolver{
+	width: 10rem;
+	height: 3.85rem;
+	border-radius: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #f0f0f0;
+	font-size: 1.5rem;
+	background-color: #E65F49;
+}
+
+@media(min-width: 765px){
+
+	.enlace-imagen {
+
+		width: 5rem;
+	}
+
+	.logotipo-encabezado{
+
+		width: 10rem;
+		margin-left: 2rem;
+	}
+
+	.contenedor{
+
+		margin-top: 4rem;
+	}
+
+	.contenedor .ErrorMes .ErrorNum{
+
+		font-size: 10rem;
+	}
+
+	.contenedor .ErrorMes .ErrorText{
+
+		margin-top: 2rem;
+		font-size: 2.2rem;
+	}
+
+	.Volver{
+
+		margin-top: 3rem;
+	}
+
+	.Volver .BVolver{
+
+		width: 10rem;
+		height: 4.45rem;
+		font-size: 1.6rem;
+	}
+
+	.imagen-background{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 16rem;
+		z-index: 0;
+		margin: 0;
+	}
+
+	.imagen-background2{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 16rem;
+		z-index: 0;
+		margin: 0;
+	}
+}
+
+@media(min-width: 1025px){
+
+	.encabezado{
+
+		height: 5rem;
+	}
+
+	.enlace-imagen {
+
+		width: 3rem;
+		margin-left: 5rem;
+	}
+
+	.logotipo-encabezado{
+		width: 10rem;
+	}
+
+	.cactus{
+
+		width: 5rem;
+		margin-top: 0;
+	}
+
+	.contenedor{
+
+		margin-top: 0rem;
+	}
+
+	.contenedor .ErrorMes .ErrorNum{
+
+		font-size: 10rem;
+		padding-bottom: 0;
+	}
+
+	.contenedor .ErrorMes .ErrorText{
+
+		padding-left: 20rem;
+		padding-right: 20rem;
+		font-size: 2rem;
+	}
+
+	.Volver{
+
+		margin-top: 1rem;
+	}
+
+	.Volver .BVolver{
+		width: 10rem;
+		height: 3.85rem;
+	}
+
+	.imagen-background{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 20rem;
+		z-index: 0;
+		margin: 0;
+	}
+
+	.imagen-background2{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 20rem;
+		z-index: 0;
+		margin: 0;
+	}
+}
