@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<link rel="shortcut icon" href="app/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="app/images/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>EasyField - Tu campo en tus manos en cualquier lugar</title>
+	<meta description="EasyField es una aplicación para todos aquellos trabajadores del campo que quieran facilitar y mejorar su trabajo. Obten datos sobre tu plantación desde cualquier sitio al instante con nuestra aplicación.">
+	<link href="app/css/main.css" rel="stylesheet">
+	<link href="app/fonts/fonts.css" rel="stylesheet">
+</head>
+
+<!-- BODY - LANDING PAGE -->
+<body>
+	<div class="body-landing-page">
+
+		<!-- ENTRAR - OCULTO POR DEFECTO -->
+		<section class="section-padre-entrar" id="seccionEntrar">
+			<!-- Sección de Entrar -->
+			<article class="bloque-login">
+				<a href="#" onclick="toggleEntrar(event)" class="cerrar-entrar">+</a>
+				<h1 class="titulo-entrar">Entrar</h1> <!-- Título -->
+				<form class="form-login" method="post" onsubmit="enviar(event)" id="formLogin"> <!-- Formulario -->
+					<!-- USUARIO -->
+					<label for="usario"></label>
+					<input class="caja-label" type="text" placeholder="Usuario..." id="inputUsuario" name="usuario" required>
+					<!-- CONTRASEÑA -->
+					<label for="contrasenya"></label>
+					<input class="caja-label" type="password" placeholder="Contraseña..." id="inputContrasenya" name="contrasenya" required>
+					<!-- SUBMIT -->
+					<input class="boton-entrar boton-enviar" type="submit" value="Enviar">
+				</form>
+			</article>
+
+			<article class="alerta-login" id="alertaLoginActiva"> <!-- Alerta - Usuario o contraseña incorrectas -->
+				<div class="contenedor-alerta-login">
+					<h2>Error</h2>
+					<p>El usuario y/o contraseña no coinciden, prueba de nuevo.</p>
+					<a href="#" id="aceptar-error" onclick="quitarAlerta(event)">Aceptar</a>
+				</div>
+			</article>
+
+			<div class="fondo-alerta" id="fondoAlerta"></div>
+
+		</section>
+
+
+		<!-- CUERPO de la landing page -->
+		<section class="seccion-padre-landing-page" role="main" id="seccion-principal">
+			<!-- Header -->
+			<header class="encabezado">
+				<a class="enlace-imagen" href="index.html"><img class="logotipo-encabezado" src="app/images/Logotype.png" alt="Logo del la empresa"></a>
+				<a href="#" class="boton-header" id=botonEntrar onclick="toggleEntrar(event)"> Entrar</a>
+			</header>
+
+			<article class="cuerpo-pagina-1">
+				<div class="cuerpo-landing-page">
+					<h1 class="titulo-reclamo">Controla tu plantación desde cualquier lugar</h1>
+					<p class="descripcion-reclamo">Datos en tiempo real, estadísticas y notificaciones en tu teléfono</p>
+					<a href="#" class="call-to-action" onclick="informate()">Infórmate aquí</a>
+				</div>
+
+				<img class="imagen-producto" src="app/images/004.png" alt="Imagen del producto">
+				<img class="imagen-producto-desktop" src="app/images/movil.png" alt="Imagen del producto"> <!-- Imagen del producto -->
+			</article>
+
+			<img id="imagenDeFondoLandingPage" class="imagen-background-landing-page" src="app/images/azul-top.png" alt="Imagen de fondo">
+			<img id="imagenAbajoLandingPage" src="app/images/azul-bot.png" class="imagen-background-landing-page-2" alt="Segunda imagen de fondo">
+			<!-- MENSAJE DE ERROR CUANDO EL USUARIO ENTRA SIN PERMISO-->
+			<div id="alerta-error">
+				<!-- Le inserto un id para editarlo en javascript dependiendo del elemento -->
+				<h2 id="nombre-elemento-error">Mensaje de error</h2>
+			</div>
+		</section>
+
+		<!-- Sección Infórmate -->
+		<section class="seccion-informacion">
+			<header class="encabezado-informate">
+				<a class="enlace-imagen-informate" href="index.html"><img class="logotipo-encabezado" src="app/images/Logotype.png" alt="Logo del la empresa"></a>
+				<a href="#" class="boton-header-informate" id=botonEntrar onclick="toggleEntrar(event)"> Entrar</a>
+			</header>
+
+			<article class="articulo-informacion">
+				<h1 class="titulo-informacion">El campo en tu móvil.</h1>
+				<p class="description-informacion">Un eficaz producto para todos los trabajadores del <span class="destacar-texto-informacion">campo</span>. Recibe alertas desde cualquier lugar. Obtén datos, estadísticas y predicciones sobre tus cultivos. <span
+						class="destacar-texto-informacion">Simple</span>, rápido e intuitivo. Lleva tu plantación al <span class="destacar-texto-informacion">siguiente nivel</span> con EasyField.</p>
+			</article>
+
+			<article class="contenedor-imagen-informacion">
+				<img src="app/images/img-datos.png" alt="Imagen de la aplicación en un teléfono móvil" class="imagen-informacion imagen-mobile">
+				<img src="app/images/img-datos-pc.png" alt="Imagen de la aplicación en un teléfono móvil" class="imagen-informacion imagen-pc">
+			</article>
+
+			<article class="articulo-informacion">
+				<h1 class="titulo-informacion">Protección y simpleza.</h1>
+				<p class="description-informacion">Protege tu campo de la manera más <span class="destacar-texto-informacion">eficaz</span> posible. Aumenta la producción y mejora la calidad de tus cultivos. Mantente informado del <span
+						class="destacar-texto-informacion">estado</span> de tu terreno fácilmente y sin complicarte la vida. Obtén <span class="destacar-texto-informacion">resultados</span> desde el primer momento.</p>
+			</article>
+
+			<article class="contenedor-imagen-informacion">
+				<img src="app/images/img-mapa.png" alt="Imagen de la aplicación en un teléfono móvil" class="imagen-informacion imagen-mobile">
+				<img src="app/images/img-mapa-pc.png" alt="Imagen de la aplicación en un teléfono móvil" class="imagen-informacion imagen-pc">
+			</article>
+
+			<a href="#" class="boton-comprar">Contáctanos</a>
+		</section>
+
+	</div>
+	<!-- SCRIPTS -->
+	<script src="app/js/jquery.min.js"></script> <!-- Importando jQuery -->
+	<!--<script src="app/js/velocity.min.js"></script>
+	<script src="app/js/main.js"></script> -->
+	<script>
+		function enviar(evento){
+			evento.preventDefault();
+			fetch('api/v1.0/sesion', {
+				method: 'post',
+				body: new FormData(document.getElementById('formLogin'))
+			}).then(function(respuesta) {
+				if (respuesta.status == 200) {
+					location.href = 'app/usuario.php';
+				} else {
+					document.getElementById("alertaLoginActiva").style.display = "flex";
+					document.getElementById("fondoAlerta").style.display = "flex";
+				}
+			})
+		}
+
+		function toggleEntrar(evento) {
+			evento.preventDefault();
+			$('#seccionEntrar').stop();
+			if($('html, body').hasClass("entrar-activo")){
+				$('.section-padre-entrar').css('display', 'none');
+				$('.bloque-login').css('display', 'none');
+				$('html, body').removeClass("entrar-activo");
+			} else {
+				$('.section-padre-entrar').css('display', 'flex');
+				$('.bloque-login').css('display', 'flex');
+				$('html, body').addClass("entrar-activo");
+			}
+		}
+
+		function quitarAlerta(evento) {
+			evento.preventDefault();
+			document.getElementById("alertaLoginActiva").style.display = "none";
+			document.getElementById("fondoAlerta").style.display = "none";
+		}
+
+		function anularScroll(){
+			$('html, body').css({
+    		overflow: 'hidden',
+    		height: '100%'
+			});
+		}
+
+		function restaurarScroll(){
+			$('html, body').css({
+    		overflow: 'auto',
+    		height: 'auto'
+			});
+		}
+
+		var posicion = -70;
+		var posicion2 = 0;
+		var opacidad = 1.0;
+		$(window).bind('mousewheel', function(event){
+			if(event.originalEvent.wheelDelta /100 > 0){	// Scroll hacia arriba
+				if($(window).scrollTop() == 0){
+					if(opacidad < 1){
+						if($('#seccion-principal').css('display') == 'flex'){
+							opacidad = opacidad + 0.08;
+							posicion = posicion + 1;
+						} else {
+							$('#seccion-principal').css({display: 'flex'});
+							opacidad = opacidad + 0.08;
+							posicion = posicion + 1;
+						}
+					}
+					anularScroll();
+					$(window).scrollTop(0);
+					$('#seccion-principal').animate({opacity: opacidad}, {duration: 10});
+				} else {
+					restaurarScroll();
+				}
+			} else {	// Scroll hacia abajo
+				if(opacidad > 0){
+					anularScroll();
+					opacidad = opacidad - 0.08;
+					posicion2 = posicion2 + 5;
+					$('#seccion-principal').animate({opacity: opacidad}, {duration: 10});
+				} else {
+					restaurarScroll();
+				}
+			}
+		});
+
+		function informate(){
+			$('#seccion-principal').animate({opacity: 0}, {duration: 800});
+			opacidad = 0.0;
+		}
+		//Esta funcion se encarga de enviar una alerta para decir que el usuario no tiene acceso, justo despues de devolverle a la pagina principal
+		window.onload = function() {
+			//si encuentra cualquiera de las variables, la elimina y ejecuta la funcion.
+			var session = sessionStorage.getItem("accesoNoPermitido");
+			if(session){
+				//cambia la descripcion del error//
+				document.getElementById("nombre-elemento-error").innerHTML = "Error : No tienes acceso a la aplicacion";
+				sessionStorage.removeItem("accesoNoPermitido");
+				alertaError();
+			}
+
+		};
+		//funcion que ejecuta la alerta del error//
+		function alertaError(){
+			setTimeout(function(){
+				$("#alerta-error").show();
+				document.getElementById("alerta-error").style.display = "flex";
+			},200)
+			//despues de 3 segundos la alerta desaparece //
+			setTimeout(function(){
+				$("#alerta-error").fadeOut();
+			},3300)
+		}
+	</script>
+
+</body>
+
+</html>
